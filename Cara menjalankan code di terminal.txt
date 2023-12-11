@@ -1,0 +1,8 @@
+MEMBUAT FITUR:
+python create_features.py --samples kaos images/kaos/ --samples kets images/kets/ --samples ransel images/ransel/ --codebook-file models/codebook.pkl --feature-map-file models/feature_map.pkl
+
+MELAKUKAN TRAINING:
+python training.py --feature-map-file models/feature_map.pkl --svm-file models/svm.pkl
+
+CLASSIFY DATA BARU:
+python classify_data.py --input-image new_image/1.jpg --svm-file models/svm.pkl --codebook-file models/codebook.pkl
